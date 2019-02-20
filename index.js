@@ -7,7 +7,7 @@ const server = http.createServer((req, res) => {
   res.end();
 }).listen(process.env.PORT);
 
-const job = new CronJob("0 */15 8-21 * * *", function() {
+const job = new CronJob("0 */15 1-14 * * *", function() {
   https.get(process.env.SERVER);
   console.log(`ping ${process.env.SERVER}`);
 });
