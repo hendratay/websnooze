@@ -1,8 +1,9 @@
 require('dotenv').config()
+const http = require("http");
 const https = require("https");
 const CronJob = require("cron").CronJob;
 
-const server = https.createServer((req, res) => {
+const server = http.createServer((req, res) => {
   res.end();
 }).listen(process.env.PORT);
 
